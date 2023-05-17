@@ -1,0 +1,29 @@
+<html>
+<head>
+<script>
+function ab()
+{
+	text= document.getElementById("t1").value;
+	document.getElementById("demo").innerHTML=/o/i.test(text);
+}
+</script>
+</head>
+<body>
+<p>
+		Create a page to check user entered string contains “O” or not.<br/>
+
+Enter String: [       ]<br/>
+
+[Check for “O”] (* Button)<br/>
+
+Result: [true/false]<br/>
+
+*Click on button show output on result label. If user string contains “O” then output should be “true” else “false”.<br/><br/>
+</p>
+<p>search for an "o" in the next paragraph:</p>
+
+<input type="text" id="t1">
+<input type="submit" onclick="ab()"><br><br>
+Result : [<label id="demo"></label>]
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+<head>
+<style>
+	.a{color:red;}
+</style>
+<script>
+	function myfun()
+	{
+		debugger;
+		var a,b="",b1="";
+		a = Number(document.getElementById("a1").value);
+		if(a=="")
+		{
+			b1="please enter any value";
+		}
+		else if(isNaN(a))
+		{
+			b1 = "Input is not a number";
+		}
+		else
+		{
+			b = "Input is a number";
+		}
+			
+			document.getElementById("demo").innerHTML = b;
+			document.getElementById("demo1").innerHTML = b1;
+			
+	}
+	
+</script>
+</head>
+<body> 
+	<p> Create html page to check user input value is numeric or not.<br/>
+Error: _____________________<br/>
+Please enter your value: [      ]<br/>
+[Click to check is entered value is numeric value?] (* Button)<br/>
+	*Textbox should not be empty when click on button. If blank then give error message in top error div element.<br/>
+	*On error set focus on textbox<br/><br/>
+ </p>
+		Error : [<label class="a" id="demo1"></label>]<br>
+		Enter no. : <input type="text" id="a1">		
+					<p id="demo"></p>
+					 <input type="submit" onclick="myfun()" value="submit">
+					 
+					 
+				
+	
+</body>
+</html>

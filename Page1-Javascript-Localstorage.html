@@ -1,0 +1,26 @@
+<html>
+<head>
+<script>
+function passvalue()
+{
+	var firstname=document.getElementById("txt").value;
+	localStorage.setItem("textvalue",firstname);
+	return false;
+}
+</script>
+</head>
+<body>
+	
+<form action="Page2-Javascript-LocalStorage.html">
+<p>	Create 2 page with name like page1.html & page2.html. <br/>
+page1.html <br/>
+Put one button & textbox on page1.html. <br/>
+Click on this button submit form on page2.html with textbox value (without using query string).<br/>
+	page2.html<br/>
+		Display page1.html textbox value when page2.html loaded by page1.html.<br/>
+</p><br/><br/>
+<input type="text" id="txt"/>
+<input type="submit" value="submit" onclick="passvalue();"/>
+</form>
+</body>
+</html>

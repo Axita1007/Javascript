@@ -1,0 +1,47 @@
+<html>
+<head>
+<style>
+	.a {
+			margin-left:20px;
+		}
+</style>
+<script>
+	function myfun()
+	{
+		var ab = document.forms[0];
+		var txt = "";
+		var i;
+		for(i = 0; i < ab.length; i++)
+		{
+			if(ab[i].checked)
+			{
+				txt = txt + ab[i].value + "  ";
+			}
+		}
+				document.getElementById("select").value = "you selected in " +    txt;
+	}
+</script>
+</head>
+<body>
+<form>
+	<p>
+		Create html page and put radio button on page as like below.<br/>
+( ) PHP<br/>
+( ) .NET<br/>
+( ) I-Phone<br/>
+		[Display Selected Department Name] (* Button)<br/>
+	Selected Department: _____________________________<br/>
+	*When user click on label of radio button then related department radio should be selected.<br/>
+	*On click of “Display Selected Department Name” button display selected department name.<br/><br/>
+
+	<p/>
+	<div class="a">
+	<label><input type="radio" name="acs" value="Php">Php</label><br>
+	<label><input type="radio" name="acs" value=".Net">.Net</label><br>
+	<label><input type="radio" name="acs" value="I-Phone">I-Phone</label><br><br>
+	</div>
+	<input type="button" onclick="myfun()" value="Display Selected Department ">
+	<input type="text" id="select" size="50"><br><br>
+</form>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+<head>
+<style>
+	.a {
+			margin-left:20px;
+		}
+</style>
+<script type="text/javascript">
+	function checkAll()
+	{
+		var items=document.getElementsByName('acs');
+		for(var i=0; i<items.length; i++)
+		{
+			if(items[i].type=='checkbox')
+				items[i].checked=true;
+				document.getElementById("UnCheck").checked  = false;
+		}
+	}
+	
+	function UncheckAll()
+	{
+		var items=document.getElementsByName('acs');
+		for(var i=0; i<items.length; i++)
+		{
+			if(items[i].type=='checkbox')
+				items[i].checked=false;
+				document.getElementById("Check").checked  = false;
+		}
+	}
+	function myfun()
+	{
+		var ab = document.forms[0];
+		var txt = "";
+		var i;
+		for(i = 0; i < ab.length; i++)
+		{
+			if(ab[i].checked)
+			{
+				txt = txt + ab[i].value + "  ";
+			}
+		}
+				document.getElementById("select").value = "you selected in " +    txt;
+	}
+</script>
+</head>
+<body>
+<p>
+	Create html page and put checkbox on page as like below.<br/>
+[ ] Check All	[ ] Un-Check All <br/>
+[ ] PHP<br/>
+[ ] .NET<br/>
+[ ] I-Phone<br/>
+		[Display Selected Department Name] (* Button)<br/>
+	Selected Department: __________________________<br/><br/>
+</p>
+<form>
+	<label><input id="Check" type="checkbox" onclick='checkAll()'>Check All</label>
+	<label><input id="UnCheck" type="checkbox" onclick='UncheckAll()'>Uncheck All</label><br><br>
+	<div class="a">
+	<label><input type="checkbox" name="acs" value="Php">Php</label><br>
+	<label><input type="checkbox" name="acs" value=".Net">.Net</label><br>
+	<label><input type="checkbox" name="acs" value="I-Phone">I-Phone</label><br><br>
+	</div>
+	<input type="button" onclick="myfun()" value="submit">
+	<input type="text" id="select" size="50">
+</form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+<style>
+	.a{color:green;}
+</style>
+<script>
+function myfun()
+	{
+		var x = document.getElementById("a1").value;
+		var ele =x.split('/');year=ele[2];
+		if((year%4==0)&&(year%100!=0)||(year%400==0))
+		{
+			text = year+ " is a leap";
+		}
+		else
+		{
+			text = year+ " is not leap year";
+		}
+			document.getElementById("demo").innerHTML=text;
+	}
+
+</script>
+</head>
+<body>
+<p>
+Create Logic to check entered date is valid or not using Javascript. </br>
+- Date Format should be DD/MM/YYYY. </br>
+- Leap year should be consider during validation.</br></br>
+
+</p>
+	Enter : <input type="text" id="a1">Format must be : [DD/MM/YEAR]<br><br>
+		<input type="button" value="Submit" onclick = "myfun()">
+		<p class="a" id="demo"></p>
+</body>
+</html>

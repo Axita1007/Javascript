@@ -1,0 +1,43 @@
+<html>
+<head>
+<script>
+function myfun()
+	{
+		debugger;
+		start1= document.getElementById("start1").value;
+		end1= document.getElementById("end1").value;
+		start2= document.getElementById("start2").value;
+		end2= document.getElementById("end2").value;
+		if((start1 < start2 && end1 > end2) || (start2 < end1 && start2 > end1))
+			{
+				document.getElementById("demo").innerHTML = true;
+			}
+			else
+			{
+				document.getElementById("demo").innerHTML = false;
+			}
+	}
+</script>
+</head>
+<body>
+<p>
+Create logic to check overlap date range.</br>
+Date Range 1 : </br>
+	From Date:	DD/MM/YYYY		To: DD/MM/YYYY</br>
+
+Date Range 2 : </br>
+	From Date:	DD/MM/YYYY		To: DD/MM/YYYY</br>
+	
+		[Check Overlap]</br>
+
+OUTPUT : Overlap = True/False</br></br>
+
+</p>
+<h4>Date Range1:<h4>
+Form Date : <input type="date" id ="start1">to : <input type="date" id ="end1">
+<h4>Date Range2:<h4>
+Form Date : <input type="date" id ="start2"> to : <input type="date" id ="end2"><br><br>
+			<input type="button" value="Submit" onclick="myfun()"><br><br>
+		OUTPUT : [<label id="demo"></label>]
+</body>
+</html>

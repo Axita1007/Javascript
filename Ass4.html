@@ -1,0 +1,68 @@
+<html>
+<head>
+<style>
+	.a {
+			margin-left:20px;
+		}
+</style>
+<script>
+	function myfun()
+	{
+
+		var x=document.getElementById("selectmy");
+		var a=x.options[x.selectedIndex].value;
+	
+		if(a == 0)
+		{
+				document.getElementById("cha1").checked=false;
+				document.getElementById("cha2").checked=false;
+				document.getElementById("cha3").checked=false;
+		}
+		if(a == 1)
+		{
+				document.getElementById("cha1").checked=true;
+		}
+		if(a == 2)
+		{
+				document.getElementById("cha2").checked=true;
+		}
+		if(a == 3)
+		{
+				document.getElementById("cha3").checked=true;
+		}
+	}
+	
+</script>
+</head>
+<body>
+<form>	
+<p>
+	Create html page and put radio button on page as like below.<br/>
+
+Sr. No: [1,2,3   v] (* dropdown)<br/>
+		[SelectRelevant Department] (* Button)<br/>
+	1.	( ) PHP<br/>
+	2.	( ) .NET<br/>
+	3.	( ) I-Phone<br/>
+*When user select 1 from dropdown and click on button then PHP should be selected, if 2 then .NET & of 3 then I-Phone.<br/><br/>
+
+<p/>
+	<div class="a">
+	<select id="selectmy">
+			<option value = "0" id="a0">Select</option>
+			<option value = "1" id="a1">1</option>
+			<option value = "2" id="a2">2</option>
+			<option value = "3" id="a3">3</option>
+	</select><br><br>
+	</div>
+	<input type="button" onclick="myfun()" value="Selected Relevant Department ">
+	<div class="a">
+	<br>
+	<label><input type="radio" id="cha1" value="Php" name="abbr">Php</label><br>
+	<label><input type="radio" id="cha2" value=".Net" name="abbr">.Net</label><br>
+	<label><input type="radio" id="cha3" value="I-Phone" name="abbr">I-Phone</label><br><br>
+	</div>
+	
+</form>
+</body>
+</html>
